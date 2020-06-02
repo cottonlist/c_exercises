@@ -48,5 +48,11 @@ int main(int argc, char const *argv[])
 		printf("%d, %s\n", cards[index]->rank, cards[index]->suit);
 	}
 
+	// free allocated memory addresses that have finished their jobs
+	for (int i = 0; i < 52; ++i)
+	{
+		free(cards[i]);
+	}
+
 	return 0;
 }
